@@ -1,0 +1,81 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+    body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        margin: 10px;
+        color: #565252;
+        font-size: 100%;
+        width: 400px;
+        height: 600px;
+        background: #009688;
+    }
+
+    ul {
+        background: silver;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    li {
+        list-style: none;
+        min-height: 40px;
+        background: white;
+        border-radius: 4px;
+        line-height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pull-right {
+        float: right;
+    }
+
+    a {
+        color: #428bca;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+        color: #2a6496;
+        text-decoration: underline;
+    }
+
+    .close {
+        display: inline-block;
+    }
+
+    #add {
+        width: 80%;
+        left: 10%;
+        bottom: 10px;
+        height: 30px;
+        border-radius: 4px;
+        border: 0px solid #eee;
+        padding-left: 10px;
+    }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" id="add" name="" v-model="key" >
+        <input type="text" id="add" name="" v-model="value" v-on:keyup.enter="saveIntoDB">
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
